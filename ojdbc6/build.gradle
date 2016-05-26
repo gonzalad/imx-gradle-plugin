@@ -1,0 +1,40 @@
+// Ce build permet d'installer le driver Oracle dans le repo local Maven
+plugins {
+    id 'java'
+    //id 'maven'
+	id 'maven-publish'
+}
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    mavenLocal()
+}
+
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+}
+
+group 'com.oracle'
+version '11.2.0.4'
+
+artifacts {
+    archives file('ojdbc6.jar')
+}
+
+publishing {
+	publications {
+		maven(MavenPublication) {
+			artifact file('ojdbc6.jar')
+			//from components.java
+		}
+//		mavenJava(MavenPublication) {
+//			from components.java
+//		}
+	}
+	repositories {
+		maven {
+			url "file://Pardmp62sh/PFBUR_8/UP-SO/iMX/70 - Technique/70-80 Patchs CODIX/libs/m2"
+		}
+	}
+}

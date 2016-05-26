@@ -1,0 +1,18 @@
+{
+  baseFolder: "./build/classes/test/patchs",
+	patches: [
+		{
+			id: "TstPatch20150521_2.tar.Z",
+			doc: "toto.docx"
+		},
+		{
+			id: "TstPatch20150601_3.tar.Z",
+			compilation: true,
+			doc: "tata.docx",
+			resources: ["tata.sql","toto.sql","truc.sql"]
+		},
+		{
+			id: "TstPatch20150701_1.tar.Z"
+		}
+	]
+}

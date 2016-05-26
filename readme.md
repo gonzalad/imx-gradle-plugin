@@ -56,14 +56,19 @@ Les tests unitaires se basent sur :
  * sur la clé de connexion SSH .ssh/id_rsa
 
 A chaque fois que vous modifiez une classe, assurez vous que les tests unitaires tournent correctement :
+
     gradle -g c:\data\.gradle test
+
 Note : pour exécuter une seule classe de test, utiliser la propriété système test.single
+    
     gradle -g c:\data\.gradle -Dtest.single=ImxRepository test 
 
 Une fois le développement terminé, publier le projet sur le maven local :
+    
     gradle -g c:\data\.gradle clean publishToMavenLocal
 
 Pour publier sur jenkins :
+    
     gradle -g c:\data\.gradle clean publish
 
 Il sera disponible sous C:\Users\<utilisateur>\.m2.
